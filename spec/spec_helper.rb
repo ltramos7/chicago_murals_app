@@ -106,12 +106,12 @@ require 'rspec'
 require 'capybara/dsl'
 require 'database_cleaner'
 
-Cabybara.app = ProjectOneApp
+Capybara.app = ProjectOneApp
 
-DabaseCleaner.strategy = :truncation
+DatabaseCleaner.strategy = :truncation
 
 RSpec.configure do |c|
-  c.include Cabybara::DSL 
+  c.include Capybara::DSL 
   
   c.before(:all) do
     DatabaseCleaner.clean 
