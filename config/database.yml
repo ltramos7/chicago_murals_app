@@ -1,12 +1,12 @@
 development:
   adapter: postgresql
-  database: project1-development
+  database: project-one-development
 
 test:
   adapter: postgresql
-  database: project1-test
+  database: project-one-test
   
 production:
   adapter: postgresql
-  database: project1-production
+  database: project-one-production
 
