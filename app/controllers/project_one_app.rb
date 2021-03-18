@@ -3,6 +3,11 @@ class ProjectOneApp < Sinatra::Base
     erb :"blogs/new"
   end
 
+  get '/blogs/:id' do
+    @blog = Blog.find(params[:id])
+    erb :"blogs/show"
+  end
+
   post '/' do
     blog = Blog.new(params["blog"])
     if blog.save
