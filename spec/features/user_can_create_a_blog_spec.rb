@@ -6,7 +6,7 @@ RSpec.describe "User can post a blog" do
     visit "/"
 
     fill_in "blog[title]", with: "Test"
-    fill_in "blog[content]", with : "This is my new blog."
+    fill_in "blog[content]", with: "This is my new blog."
 
     click_on "Post"
     new_blog = Blog.last
