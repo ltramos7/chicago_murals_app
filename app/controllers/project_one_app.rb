@@ -1,10 +1,15 @@
 class ProjectOneApp < Sinatra::Base
   get '/' do
-    erb :"blogs/new"
+    erb :"blog/new"
   end
 
   get '/blogs/:id' do
     @blog = Blog.find(params[:id])
+    erb :"blog/show"
+  end
+
+  get '/blogs' do
+    @blogs = Blog.all
     erb :"blogs/show"
   end
 
@@ -13,7 +18,7 @@ class ProjectOneApp < Sinatra::Base
     if blog.save
       redirect "/blogs/#{blog.id}"
     else
-      erb :"blogs/new"
+      erb :"blog/new"
     end
   end
 end
