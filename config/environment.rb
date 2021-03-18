@@ -13,7 +13,7 @@ Dir.glob(File.join(APP_ROOT, 'app', 'models', '*.rb')).each{|file| require file}
 # require database configurations
 require File.join(APP_ROOT, 'config', 'database')
 
-#configure Project1 settings
+#configure ProjectOne settings
 class ProjectOneApp < Sinatra::Base
   set :method_override, true
   set :root, APP_ROOT
