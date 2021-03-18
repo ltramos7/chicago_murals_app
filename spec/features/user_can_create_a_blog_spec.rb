@@ -12,7 +12,7 @@ RSpec.describe "User can post a blog" do
     new_blog = Blog.last
 
     expect(new_blog.title).to eq("Test")
-    expect(new_blog.content).to eq("This is my new blog") #will i need the period here?
+    expect(new_blog.content).to eq("This is my new blog.") #originally, the example does not include a period, but later in the example for rspec testing it does.
     expect(current_path).to eq("/blogs/#{new_blog.id}")
 
     expect(page).to have_content("This is my new blog.")
