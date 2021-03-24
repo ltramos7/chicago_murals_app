@@ -13,17 +13,17 @@ class ProjectOneApp < Sinatra::Base
     erb :"blog/edit"
   end
 
+  get '/blogs' do
+    @blogs = Blog.all
+    erb :"blogs/show"
+  end
+
   patch '/blogs/:id' do 
     @blog = Blog.find(params[:id])
     @blog.title = params[:title]
     @blog.content = params[:content]
     @blog.save
     redirect to "/blogs/#{@blog.id}"
-  end
-
-  get '/blogs' do
-    @blogs = Blog.all
-    erb :"blogs/show"
   end
 
   post '/' do
