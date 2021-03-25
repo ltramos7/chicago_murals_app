@@ -1,5 +1,5 @@
 class User < Sinatra::Base
-  get '/users'do 
+  get '/users' do 
     erb :"users/new"
   end
 end
