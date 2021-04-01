@@ -3,8 +3,7 @@
 # Install
 - run `bundle`
 
-# Run
-- run `bundle exec ruby myapp.rb`
+# Run Server
 - run `bundle exec shotgun`
 
 # Test/Deployment
