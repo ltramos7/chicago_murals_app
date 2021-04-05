@@ -27,9 +27,9 @@ class ProjectOneApp < Sinatra::Base
   end
 
   post '/' do
-    blog = Blog.new(params["blog"])
-    if blog.save
-      redirect "/blogs/#{blog.id}"
+    @blog = Blog.new(params["blog"])
+    if @blog.save
+      redirect "/blogs/#{@blog.id}"
     else
       erb :"blog/new"
     end
