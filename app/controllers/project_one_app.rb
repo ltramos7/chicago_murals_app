@@ -1,4 +1,4 @@
-class ProjectOneApp < Sinatra::Base
+class App < Sinatra::Base
   get '/' do
     erb :"blog/new"
   end
