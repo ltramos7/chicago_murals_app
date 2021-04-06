@@ -1,4 +1,4 @@
-class User < Sinatra::Base
+class App < Sinatra::Base
   get '/users/new' do 
     erb :"users/new"
   end
