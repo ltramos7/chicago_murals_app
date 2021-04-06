@@ -1,5 +1,5 @@
 class User < Sinatra::Base
-  get '/' do 
+  get '/users/new' do 
     erb :"users/new"
   end
 
@@ -10,10 +10,10 @@ class User < Sinatra::Base
 
   get '/users' do
     @users = User.all
-    erb :users/show
+    erb :"users/show"
   end
 
-  post '/users' do
+  post '/users/new' do
     @user =  User.new(params["user"])
     if @user.save
       redirect "/users/#{@user.id}"
@@ -21,6 +21,5 @@ class User < Sinatra::Base
       erb :"users/new"
     end
   end
-
 end
 
