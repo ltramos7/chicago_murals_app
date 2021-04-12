@@ -1,7 +1,7 @@
 class BlogsController < ApplicationController
 
   get '/blogs' do
-    erb :index
+    erb :'blogs/index'
   end
   # get '/' do
   #   erb :"blog/new"
