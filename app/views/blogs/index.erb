@@ -1,1 +1,6 @@
-index view
+<h1>Index Blog View</h1>
+
+<% @blogs.each do |blog|%>
+  <h2><%= blog.title %><h2>
+  <p><%= blog.content %></p>
+<% end %>

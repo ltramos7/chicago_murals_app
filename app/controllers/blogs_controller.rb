@@ -1,8 +1,15 @@
 class BlogsController < ApplicationController
 
   get '/blogs' do
+    @blogs = Blog.all
     erb :'blogs/index'
   end
+
+  get '/blogs/:id' do
+    @blog = Blog.find(params[:id])
+    erb :'blogs/show'
+  end
+
   # get '/' do
   #   erb :"blog/new"
   # end
