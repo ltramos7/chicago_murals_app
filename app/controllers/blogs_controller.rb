@@ -1,4 +1,4 @@
-class BlogsController < Sinatra::Base
+class BlogsController < ApplicationController
 
   get '/blogs' do
     erb :index
