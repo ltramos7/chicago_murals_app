@@ -29,5 +29,11 @@ class AesthetesController < ApplicationController
     @aesthete.update(first_name: params[:first_name], last_name: params[:last_name])
     erb :"aesthetes/show"
   end
+
+  delete "/aesthetes/:id" do
+    @aesthete = Aesthete.find(params[:id])
+    @aesthete.delete
+    erb :"aesthetes/index"
+  end
 end
 
