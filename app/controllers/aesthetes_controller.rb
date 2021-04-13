@@ -1,6 +1,7 @@
 class AesthetesController < ApplicationController
   get '/aesthetes' do
-    "aesthetes page"
+    @aesthetes = Aesthete.all
+    erb :'aesthetes/index'
   end
 end
 
