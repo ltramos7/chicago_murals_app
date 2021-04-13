@@ -1,6 +1,5 @@
 class ApplicationController < Sinatra::Base
-  
-  get '/' do
+  get "/" do
     "Welcome to Chicago Murals"
   end
 end
