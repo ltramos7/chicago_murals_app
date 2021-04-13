@@ -8,4 +8,5 @@ require File.expand_path('../config/environment', __FILE__)
 use Rack::MethodOverride
 use BlogsController
 use AesthetesController
+use ArtistsController
 run ApplicationController
