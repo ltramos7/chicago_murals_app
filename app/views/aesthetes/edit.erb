@@ -1,0 +1,10 @@
+<h1>Edit Aesthete</h1>
+
+<form action="/aesthetes/<%= @aesthete.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label for="first_name">First Name</label>
+  <input type= "text" name="first_name" value="<%= @aesthete.first_name %>">
+  <label for="last_name">Last Name</label>
+  <input type= "text" name="last_name" value="<%= @aesthete.last_name %>">
+  <input type="submit" value="Edit Aesthete">
+</form>
