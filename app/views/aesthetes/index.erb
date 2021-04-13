@@ -1,1 +1,5 @@
 <h1>Aesthetes Index</h1>
+
+<% @aesthetes.each do |aesthete| %>
+  <p><%= aesthete.first_name %> <%= aesthete.last_name %></p>
+<% end %>
