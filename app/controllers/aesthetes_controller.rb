@@ -1,12 +1,21 @@
 class AesthetesController < ApplicationController
-  get '/aesthetes' do
+  get "/aesthetes" do
     @aesthetes = Aesthete.all
-    erb :'aesthetes/index'
+    erb :"aesthetes/index"
   end
 
-  get '/aesthetes/:id' do
+  get "/aesthetes/new"do
+    erb :"aesthetes/new"
+  end
+
+  get "/aesthetes/:id" do
     @aesthete = Aesthete.find(params[:id])
-    erb :'aesthetes/show'
+    erb :"aesthetes/show"
+  end
+
+  post "/aesthetes" do
+    @aesthete = Aesthete.create(params)
+    redirect "/aesthetes/#{@aesthete.id}"
   end
 
 end
