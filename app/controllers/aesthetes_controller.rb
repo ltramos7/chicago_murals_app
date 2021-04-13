@@ -23,6 +23,11 @@ class AesthetesController < ApplicationController
     @aesthete = Aesthete.find(params[:id])
     erb :"aesthetes/edit"
   end
-
+  
+  patch "/aesthetes/:id" do
+    @aesthete = Aesthete.find(params[:id])
+    @aesthete.update(first_name: params[:first_name], last_name: params[:last_name])
+    erb :"aesthetes/show"
+  end
 end
 
