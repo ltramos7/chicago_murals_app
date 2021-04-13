@@ -15,7 +15,13 @@ class AesthetesController < ApplicationController
 
   post "/aesthetes" do
     @aesthete = Aesthete.create(params)
-    redirect "/aesthetes/#{@aesthete.id}"
+    erb :"aesthetes/show" #does not redirect to the aesthetes specific url such as  "/aesthetes/:id"
+    # redirect "/aesthetes/#{@aesthete.id}"   the redirect will cause a refresh, so I may lose error messages
+  end
+
+  get "/aesthetes/:id/edit" do
+    @aesthete = Aesthete.find(params[:id])
+    erb :"aesthetes/edit"
   end
 
 end
