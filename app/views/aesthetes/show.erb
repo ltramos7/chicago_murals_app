@@ -3,3 +3,8 @@
 <p><%= @aesthete.first_name%> <%= @aesthete.last_name %></p>
 
 <a href="/aesthetes/<%= @aesthete.id%>/edit">Edit Profile</a>
+
+<form action="/aesthetes/<% @aesthete.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>
