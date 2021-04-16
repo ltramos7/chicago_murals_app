@@ -18,4 +18,9 @@ class ArtistsController < ApplicationController
     erb :"artists/show"
   end
 
+  patch "/artists/:id/edit" do
+    @artist = Artist.find(params[:id])
+    erb :"artists/edit"
+  end
+
 end
