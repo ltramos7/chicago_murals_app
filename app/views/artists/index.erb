@@ -1,0 +1,8 @@
+<h1>Artists Index</h1>
+
+<% @artists.each do |artist| %>
+  <p><%= artist.alias %></p>
+  <p><%= artist.first_name %></p>
+  <p><%= artist.last_name %></p>
+  <p>.................</p>
+<% end%>

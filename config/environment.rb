@@ -13,8 +13,8 @@ Dir.glob(File.join(APP_ROOT, 'app', 'models', '*.rb')).each{|file| require file}
 # require database configurations
 require File.join(APP_ROOT, 'config', 'database')
 
-#configure ProjectOne settings
-class App < Sinatra::Base
+#configure ApplicationController settings
+class ApplicationController < Sinatra::Base
   set :method_override, true
   set :root, APP_ROOT
   set :views, File.join(APP_ROOT, "app", "views")
