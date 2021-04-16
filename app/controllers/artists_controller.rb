@@ -8,4 +8,9 @@ class ArtistsController < ApplicationController
     erb :"artists/new"
   end
 
+  post "/artists" do
+    @artist = Artist.create(params)
+    redirect "/artists"
+  end
+
 end
