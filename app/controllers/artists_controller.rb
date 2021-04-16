@@ -10,7 +10,12 @@ class ArtistsController < ApplicationController
 
   post "/artists" do
     @artist = Artist.create(params)
-    redirect "/artists"
+    redirect "/artists/#{@artist.id}"
+  end
+
+  get "/artists/:id" do
+    @artist = Artist.find(params[:id])
+    erb :"artists/show"
   end
 
 end
