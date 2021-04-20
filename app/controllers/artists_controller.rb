@@ -27,7 +27,12 @@ class ArtistsController < ApplicationController
     @artist = Artist.find(params[:id])
     @artist.update(first_name: params[:first_name], last_name: params[:last_name], alias: params[:alias])
     redirect "/artists/#{@artist.id}"
+  end
 
+  delete "/artists/:id" do
+    @artist = Artist.find(params[:id])
+    @artist.delete
+    redirect "/artists"
   end
 
 end
