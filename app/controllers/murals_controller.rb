@@ -17,4 +17,14 @@ class MuralsController < ApplicationController
     @mural = Mural.create(params)
     redirect "/murals"
   end
+
+  get "/murals/:id/edit" do
+    @mural = Mural.find(params[:id])
+    erb :"murals/edit"
+  end
+
+  patch "/murals/:id" do
+    @mural = Mural.update(title: params[:title], artist: params[:artist], location: params[:location])
+    redirect "/murals/#{@mural.id}"
+  end
 end
