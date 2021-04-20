@@ -9,4 +9,5 @@ require File.expand_path('../config/environment', __FILE__)
 use BlogsController
 use AesthetesController
 use ArtistsController
+use MuralsController
 run ApplicationController
