@@ -1,5 +1,6 @@
 class MuralsController < ApplicationController
   get "/murals" do
-    "murals index page"
+    @murals = Mural.all 
+    erb :"murals/index"
   end
 end
