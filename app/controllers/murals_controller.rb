@@ -3,4 +3,9 @@ class MuralsController < ApplicationController
     @murals = Mural.all 
     erb :"murals/index"
   end
+
+  get "/murals/:id" do
+    @mural = Mural.find(params[:id])
+    erb :"murals/show"
+  end
 end
