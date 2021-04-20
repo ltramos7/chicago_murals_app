@@ -1,0 +1,17 @@
+<h1>Edit the Mural</h1>
+
+<form action="/murals/<%= @mural.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <label for="title">Title:</label>
+  <input type="text" name="title" value="<%= @mural.title %>">
+
+  <label for="artist">Artist:</label>
+  <input type="text" name="artist" value="<%= @mural.artist %>">
+
+  <label for="location">Location:</label>
+  <input type="text" name="location" value="<%= @mural.location %>">
+
+  <input type="submit" value="Edit Mural">
+
+</form>
