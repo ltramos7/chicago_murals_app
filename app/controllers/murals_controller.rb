@@ -24,7 +24,8 @@ class MuralsController < ApplicationController
   end
 
   patch "/murals/:id" do
-    @mural = Mural.update(title: params[:title], artist: params[:artist], location: params[:location])
+    @mural = Mural.find(params[:id])
+    @mural.update(title: params[:title], artist: params[:artist], location: params[:location])
     redirect "/murals/#{@mural.id}"
   end
 end
