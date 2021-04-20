@@ -28,4 +28,11 @@ class MuralsController < ApplicationController
     @mural.update(title: params[:title], artist: params[:artist], location: params[:location])
     redirect "/murals/#{@mural.id}"
   end
+
+  delete "/murals/:id" do
+    @mural = Mural.find(params[:id])
+    @mural.delete
+    redirect "/murals"
+  end
+
 end
