@@ -5,3 +5,8 @@
 <p><%= @mural.location%></p>
 
 <a href="/murals/<%=@mural.id%>/edit">Edit Mural</a>
+
+<form action="/murals/<%= @mural.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>
