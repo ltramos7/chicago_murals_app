@@ -1,0 +1,12 @@
+<h1>Mural Show Page</h1>
+
+<p><%= @mural.title%></p>
+<p><%= @mural.artist%></p>
+<p><%= @mural.location%></p>
+
+<a href="/murals/<%=@mural.id%>/edit">Edit Mural</a>
+
+<form action="/murals/<%= @mural.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>

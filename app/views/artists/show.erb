@@ -5,3 +5,8 @@
 <p><%= @artist.alias %></p>
 
 <a href="/artists/<%= @artist.id %>/edit">Edit Artist</a>
+
+<form action="<%= @artist.id %>"  method="post">
+  <input name="_method" type="hidden" value="delete">
+  <input type="submit" value="Delete Artist">
+</form>
